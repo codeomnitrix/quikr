@@ -1,0 +1,19 @@
+<div ng-controller="viewAllController">
+  <div class="row" ng-repeat="row in advArray">
+    <div ng-class="(12/row.length) | col" ng-repeat="col in row track by $index" style="height: 500px;">
+      <quikrad details="$index"
+       title_img="(col.image_count>1)?col.images[0]:col.images"
+       ad_title="col.title"
+       ad_locality="col.ad_locality"
+       ad_brand="col.attribute_Brand_name"
+       ad_model="col.attribute_Body_Style"
+       kms_driven="col.kms_Driven"
+       make_year="col.year"
+       price="col.attribute_Price"
+       >
+      </quikrad>
+      <br style="clear: both;"/>
+    </div>
+    <br style="clear: both;"/>
+  </div>
+</div>

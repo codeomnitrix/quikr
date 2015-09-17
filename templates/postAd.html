@@ -1,0 +1,123 @@
+<br/>
+<md-button class="md-fab md-mini md-warn pull-right" aria-label="Post Ad"
+ href="#/">
+    <i class="material-icons" style="font-size: 1.6em;">clear</i>
+</md-button>
+<br/>
+<legend>Post an Ad &amp; get your car Quikr Inspected</legend>
+  <form class="underlined_form_row" action="quikrHandler.php" method="post">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="Brand_name">Brand</label>
+        <select class="form-control" ng-model="Brand_name">
+          <option value="{{brand.brandName}}" ng-repeat="brand in brands">{{brand.brandName}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="Model">Model</label>
+        <select class="form-control" ng-model="Model">
+          <option value="{{color}}" ng-repeat="model in models" class="form-control">{{model}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="Kms_Driven">Kms Driven</label>
+        <input type="text" class="form-control" ng-model="Kms_Driven" placeholder="Enter Kms driven">
+      </div>
+      <div class="col-md-6">
+        <label for="Year">Year</label>
+        <select class="form-control" ng-model="Year">
+          <option value="{{year}}" ng-repeat="year in years">{{year}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" ng-model="Price" placeholder="Enter your estimated price here">
+      </div>
+      <div class="col-md-6">
+        <label for="fuel">Fuel Type</label>
+        <select class="form-control">
+          <option value="{{fuel}}" ng-repeat="fuel in fuels">{{fuel}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="No_of_owners">Number of Owners</label>
+        <select class="form-control" ng-model="No_of_owners">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="insurance">Insurance Valid Till</label>
+        <input type="text" ng-model="insurance" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="cityName">City</label>
+        <select class="form-control" ng-model="cityName">
+          <option value="{{place.city}}" ng-repeat="place in places">{{place.city}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="locations">Locality</label>
+        <select class="form-control" ng-model="locations">
+          <option value="{{locality}}" ng-repeat="locality in localities">{{locality}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="description">Description</label>
+        <textarea class="form-control" ng-model="description" rows="8" cols="40" placeholder="Description"></textarea>
+      </div>
+    </div>
+    <legend>Seller Information</legend>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="You_are">You are</label>
+        <input type="text" ng-model="You_are" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label for="Your_name">Your Name</label>
+        <input type="text" ng-model="Your_name" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="email">Your Email</label>
+        <input type="text" ng-model="email" class="form-control" placeholder="Enter your email here">
+      </div>
+      <div class="col-md-6">
+        <label for="userMobile">Your Mobile</label>
+        <input type="text" name="userMobile" class="form-control" placeholder="Enter your mobile number here">
+      </div>
+    </div>
+    <div class="well">
+      <legend>Create an Auction</legend>
+      <input type="checkbox" name="isAuction" value=""> Make my ad appear as auction
+      <div class="auctionLastsFor">
+        <label for="auctionLastsFor">Auction lasts for</label>
+        <select class="" name="auctionLastsFor">
+          <option value="5">5 days</option>
+          <option value="10">10 days</option>
+          <option value="15">15 days</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="checkbox" name="name" value=""> Send me Quikr Email/SMS Alerts for people looking to buy cars in Kanpur
+        <br/>
+        By clicking "Post", you agree to our Terms of Use &amp; Privacy Policy.
+        <br/>
+        <input type="submit" value="Post" class="btn btn-primary"/>
+      </div>
+    </div>
+  </form>

@@ -1,0 +1,75 @@
+<div class="row" ng-controller="viewAdController">
+  <div class="col-md-8">
+    <div class="img-container">
+      <img ng-src="{{bigImgSrc}}" alt="" class="big-image" id="bigImage"/>
+      <div class="container-outer">
+        <div class="sub-image-container">
+          <img ng-src="{{oneImage}}" alt="" class="sub-image" ng-repeat="oneImage in allImages track by $index"
+          ng-click="showInBig(oneImage)"/>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <h1>Toyota caroola 2008 top</h1>
+      <h3>Ashok Nagar</h3>
+      <br/>
+      <div class="" style="padding: 10px; background-color: rgb(142, 151, 148); float: left;"><span>Rs. 10000</span></div>
+      <br style="clear: both;"/>
+      <p>
+          Sigal hand uesd.full inshord.oll new tayers.oll sarves don in compny..only bayrrs can cool plz....
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="person-details">
+      <h3>Person Name</h3>
+      <dl>
+          <dt>Email</dt>
+          <dd>vinit.tiwari2012@gmail.com</dd>
+          <dt>Mobile</dt>
+          <dd>9822882211</dd>
+      </dl>
+    </div>
+    <br/>
+    <div class="person-details">
+      <h3>Top Bids</h3>
+      <dl>
+          <dt>Bid 1</dt>
+          <dd>355000</dd>
+          <dt>Bid 2</dt>
+          <dd>350000</dd>
+          <dt>Bid 2</dt>
+          <dd>340000</dd>
+      </dl>
+    </div>
+    <br/>
+    <div class="car-details">
+      <footer>
+          <dl>
+              <dt>Brand</dt>
+              <dd>Hyundai</dd>
+              <dt>Model</dt>
+              <dd>Santro</dd>
+              <dt>Kms Driven</dt>
+              <dd>78000</dd>
+              <dt>Year</dt>
+              <dd>2005</dd>
+          </dl>
+      </footer>
+    </div>
+  </div>
+</div>
+<br/><br/>
+<div class="row">
+    <div class="col-md-3">
+      <input type="text" ng-model="amount" placeholder="Bid Amount" class="form-control">
+    </div>
+    <div class="col-md-5">
+      <input type="text" ng-model="bidderEmail" placeholder="Email" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <input type="text" ng-model="bidderContact" placeholder="Contact" class="form-control">
+    </div>
+</div>
+<br/>
+<md-button class="md-raised md-primary">Place Bid</md-button>

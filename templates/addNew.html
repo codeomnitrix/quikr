@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-8">
+    <qnewad></qnewad>
+  </div>
+  <div ng-controller="viewAllController" class="col-md-4" style="overflow: hidden; height: 150%;">
+    <div class="q-overlay">
+
+    </div>
+    <div style="width: 300%">
+      <div class="row" ng-repeat="row in advArray">
+        <div ng-class="(12/row.length) | col" ng-repeat="col in row" style="height: 450px;">
+          <quikrad details="'1'"
+           title_img="'assets/dummy/1.jpg'"
+           ad_title="'Hyundai Elantra for Sale'"
+           ad_locality="'Somewhere in Kanpur'"
+           ad_brand="'Hyundai'"
+           ad_model="'Elantra'"
+           kms_driven="'3000'"
+           make_year="'2001'"
+           >
+          </quikrad>
+          <br style="clear: both;"/>
+        </div>
+        <br style="clear: both;"/>
+      </div>
+    </div>
+  </div>
+</div>
